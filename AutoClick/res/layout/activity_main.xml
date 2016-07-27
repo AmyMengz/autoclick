@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray02"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="7dp" >
+
+            <Button
+                android:id="@+id/btn_down"
+                style="@style/file_listner_btn_style"
+                android:text="@string/downLoad" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue02"
+                android:padding="@dimen/padding_size"
+                android:text="@string/choose_market"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size" />
+
+            <RadioGroup
+                android:id="@+id/rg_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rb_bd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_baidu" />
+
+                <RadioButton
+                    android:id="@+id/rb_360"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_360" />
+
+                <RadioButton
+                    android:id="@+id/rb_yyb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_yyb" />
+
+                <RadioButton
+                    android:id="@+id/rb_wdj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_wdj" />
+
+                <RadioButton
+                    android:id="@+id/rb_pp_assistant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_pp_assistant" />
+
+                <RadioButton
+                    android:id="@+id/rb_az"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_anzhi" />
+
+                <RadioButton
+                    android:id="@+id/rb_mu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_miu"
+                    android:visibility="gone" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size"
+            android:background="@color/gray04"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_choose_apk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue02"
+                android:padding="@dimen/padding_size"
+                android:text="@string/choose_apk"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size" />
+
+            <ListView
+                android:id="@+id/lv_app_choose_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="singleChoice" >
+            </ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <EditText
+                    android:id="@+id/et_app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:background="@color/gray02"
+                    android:hint="@string/add_an_db_tip"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/et_package_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_app_name"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/gray02"
+                    android:hint="@string/add_pn_db_tip"
+                    android:padding="10dp" />
+                <!-- android:text="com.huodongjia.girl2048" -->
+
+                <Button
+                    android:id="@+id/btn_package_name_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/et_package_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/et_app_name"
+                    android:background="@drawable/file_record_btn_selector"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textSize="@dimen/text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="7dp" >
+
+                <Button
+                    android:id="@+id/btn_get_app_sd"
+                    style="@style/file_listner_btn_style"
+                    android:text="@string/get_app_from_sd" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_percent_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/et_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_percent_tips"
+                android:background="@color/gray02"
+                android:hint="@string/set_percent_hint"
+                android:maxLength="3"
+                android:numeric="integer"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/btn_percent_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/et_percent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_percent_tips"
+                android:background="@drawable/file_record_btn_selector"
+                android:text="@string/set"
+                android:textSize="@dimen/text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_install_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_install_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_install_tips"
+                android:background="@color/gray02"
+                android:hint="@string/set_install_hint"
+                android:maxLength="3"
+                android:numeric="integer"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/btn_install_time_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/et_install_time"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_install_tips"
+                android:background="@drawable/file_record_btn_selector"
+                android:text="@string/set"
+                android:textSize="@dimen/text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/auto_to_market_tip" />
+
+            <ToggleButton
+                android:id="@+id/tb_to_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/togglebtn_bg"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/auto_to_hdj_tip" />
+
+            <ToggleButton
+                android:id="@+id/tb_to_hdj_hook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/togglebtn_bg"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/auto_click_in_market" />
+
+            <ToggleButton
+                android:id="@+id/tb_auto_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/togglebtn_bg"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/auto_roobot" />
+
+            <ToggleButton
+                android:id="@+id/tb_auto_reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/togglebtn_bg"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_reboot_recode_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_size"
+            android:text="@string/reboot_recode_tips_no_reboot"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+</ScrollView>
